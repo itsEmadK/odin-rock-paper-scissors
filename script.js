@@ -1,10 +1,10 @@
 function getComputersChoice() {
     if (Math.random() < 0.33) {
-        return "Rock";
+        return "rock";
     } else if (Math.random() < 0.66) {
-        return "Paper";
+        return "paper";
     } else {
-        return "Scissors"
+        return "scissors"
     }
 }
 
