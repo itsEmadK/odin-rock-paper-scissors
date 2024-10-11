@@ -70,6 +70,14 @@ function playGame() {
     }
 
 
+
+
+    console.log(
+        (userScore > computerScore ? `Congratulations! you have won!` :
+            `Sorry, you have lost...`) +
+        `Your score: ${userScore} - Computer's score:${computerScore}`
+    );
+
 }
 
 
