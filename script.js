@@ -4,11 +4,7 @@ function playGame() {
     let computerScore = 0;
 
     for (let i = 0; i < 5; i++) {
-
-        const winner = playRound(getUsersChoice(), getComputersChoice());
-        winner == "user" ? userScore++ :
-            winner == "computer" ? computerScore++ : null;
-
+        playRound(getUsersChoice(), getComputersChoice());
     }
 
     console.log(
@@ -42,14 +38,12 @@ function playGame() {
 
     }
 
-    //returns the winner of the round.
     function playRound(usersChoice, computersChoice) {
         if (usersChoice.toLowerCase() === computersChoice.toLowerCase()) {
             console.log(
                 `You both used ${usersChoice} so this is a tie!`
             );
 
-            return null;
         } else if (
             String(usersChoice).toLowerCase() === "rock" && computersChoice === "scissors" ||
             String(usersChoice).toLowerCase() === "paper" && computersChoice === "rock" ||
@@ -59,8 +53,8 @@ function playGame() {
                 usersChoice === "paper" ? "covered" : "cut"
                 } computer's ${computersChoice}!
             `);
+            userScore++;
 
-            return "user";
         } else {
 
             if (
@@ -77,8 +71,8 @@ function playGame() {
                     "You got disqualified this round due to using an unknown object!")
                     ;
             }
+            computerScore++;
 
-            return "computer";
         }
     }
 
