@@ -39,7 +39,7 @@ function playGame() {
     }
 
     function playRound(usersChoice, computersChoice) {
-        if (usersChoice.toLowerCase() === computersChoice.toLowerCase()) {
+        if (usersChoice??"".toLowerCase() === computersChoice.toLowerCase()) {
             console.log(
                 `You both used ${usersChoice} so this is a tie!`
             );
