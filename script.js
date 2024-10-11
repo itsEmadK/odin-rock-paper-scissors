@@ -15,3 +15,18 @@ function getUsersChoice() {
 
 
 }
+
+//returns the winner of the round.
+function playRound(usersChoice,computersChoice) {
+    if (usersChoice == computersChoice) {
+        return null;
+    }else if (
+        String(usersChoice).toLowerCase() == "rock" && computersChoice == "scissors" ||
+        String(usersChoice).toLowerCase() == "paper" && computersChoice == "rock" ||
+        String(usersChoice).toLowerCase() == "scissors" && computersChoice == "paper"
+    ) {
+        return "user";
+    }else {
+        return "computer";
+    }
+}
