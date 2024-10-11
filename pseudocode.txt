@@ -1,0 +1,20 @@
+REPEAT for 5 times:
+GET  the user’s choice.
+GET the computer’s choice.
+    IF user’s choice and computer’s choice are the same, THEN:
+        This round has no winner and it’s a tie.
+        Display a message declaring the tie for the round.
+    IF user’s choice is “rock” and computer’s choice is “scissors”, or the user’s choice is “paper” and computer’s choice is “rock”, or the user’s choice is “scissors” and computer’s choice is “paper”, THEN:
+        DISPLAY a message declaring the user’s win.
+        INCREMENT the user’s wins count by 1.
+    ELSE:
+        DISPLAY a message declaring the user’s lost.
+        INCREMENT the computer’s wins count by 1.
+    END IF.
+
+IF user’s wins count is greater than computer’s wins count, THEN:
+    DISPLAY a message declaring the user as the winner of the  entire game.
+ELSE:
+    IF user’s wins count is greater than computer’s wins count, THEN:
+    DISPLAY a message declaring the computer as the winner  of the entire game.
+
