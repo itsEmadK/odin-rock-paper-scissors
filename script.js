@@ -6,18 +6,8 @@ function playGame() {
     for (let i = 0; i < 5; i++) {
 
         const winner = playRound(getUsersChoice(), getComputersChoice());
-        switch (winner) {
-            case "user":
-                userScore++;
-                break;
-
-            case "computer":
-                computerScore++;
-                break;
-
-            default:
-                break;
-        }
+        winner == "user" ? userScore++ :
+            winner == "computer" ? computerScore++ : null;
 
     }
 
@@ -60,7 +50,7 @@ function playGame() {
         ) {
             console.log(`Your ${usersChoice} ${usersChoice === "rock" ? "broke" :
                 usersChoice === "paper" ? "covered" : "cut"
-            } computer's ${computersChoice}!
+                } computer's ${computersChoice}!
             `);
 
             return "user";
@@ -72,13 +62,13 @@ function playGame() {
                 String(usersChoice).toLowerCase() === "scissors"
             ) {
                 console.log(`Your ${usersChoice} ${usersChoice === "rock" ? "was covered" :
-                        usersChoice === "paper" ? "was cut" : "were broken"
+                    usersChoice === "paper" ? "was cut" : "were broken"
                     } by computer's ${computersChoice}`
                 );
             } else {
                 console.log(usersChoice == null ? "You forfeited the round!" :
                     "You got disqualified this round due to using an unknown object!")
-                ;
+                    ;
             }
 
             return "computer";
