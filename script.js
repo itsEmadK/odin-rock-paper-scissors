@@ -3,6 +3,30 @@ function playGame() {
     let userScore = 0;
     let computerScore = 0;
 
+    for (let i = 0; i < 5; i++) {
+
+        const winner = playRound(getUsersChoice(), getComputersChoice());
+        switch (winner) {
+            case "user":
+                userScore++;
+                break;
+
+            case "computer":
+                computerScore++;
+                break;
+
+            default:
+                break;
+        }
+
+    }
+
+    console.log(
+        (userScore > computerScore ? `Congratulations! you have won!` :
+            `Sorry, you have lost...`) +
+        `Your score: ${userScore} - Computer's score:${computerScore}`
+    );
+
     function getComputersChoice() {
         if (Math.random() < 0.33) {
             return "rock";
@@ -36,42 +60,18 @@ function playGame() {
         ) {
             console.log(`Your ${usersChoice} ${usersChoice === "rock" ? "broke" :
                 usersChoice === "paper" ? "covered" : "cut"
-                } computer's ${computersChoice}!
+            } computer's ${computersChoice}!
             `);
 
             return "user";
         } else {
             console.log(`Your ${usersChoice} ${usersChoice === "rock" ? "was covered" :
-                usersChoice === "paper" ? "was cut" : "were broken"
+                    usersChoice === "paper" ? "was cut" : "were broken"
                 } by computer's ${computersChoice}`
             );
             return "computer";
         }
     }
-
-    for (let i = 0; i < 5; i++) {
-
-        const winner = playRound(getUsersChoice(), getComputersChoice());
-        switch (winner) {
-            case "user":
-                userScore++;
-                break;
-
-            case "computer":
-                computerScore++;
-                break;
-
-            default:
-                break;
-        }
-
-    }
-
-    console.log(
-        (userScore > computerScore ? `Congratulations! you have won!` :
-            `Sorry, you have lost...`) +
-        `Your score: ${userScore} - Computer's score:${computerScore}`
-    );
 
 }
 
