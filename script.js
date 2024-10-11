@@ -11,7 +11,7 @@ function getComputersChoice() {
 function getUsersChoice() {
 
     const usersChoice = prompt("Please enter your choice between Rock, Paper and Scissors:");
-    return usersChoice();
+    return usersChoice;
 
 
 }
