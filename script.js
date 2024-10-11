@@ -65,10 +65,22 @@ function playGame() {
 
             return "user";
         } else {
-            console.log(`Your ${usersChoice} ${usersChoice === "rock" ? "was covered" :
-                    usersChoice === "paper" ? "was cut" : "were broken"
-                } by computer's ${computersChoice}`
-            );
+
+            if (
+                String(usersChoice).toLowerCase() === "rock" ||
+                String(usersChoice).toLowerCase() === "paper" ||
+                String(usersChoice).toLowerCase() === "scissors"
+            ) {
+                console.log(`Your ${usersChoice} ${usersChoice === "rock" ? "was covered" :
+                        usersChoice === "paper" ? "was cut" : "were broken"
+                    } by computer's ${computersChoice}`
+                );
+            } else {
+                console.log(usersChoice == null ? "You forfeited the round!" :
+                    "You got disqualified this round due to using an unknown object!")
+                ;
+            }
+
             return "computer";
         }
     }
