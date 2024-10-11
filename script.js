@@ -49,8 +49,6 @@ function playGame() {
         }
     }
 
-
-
     for (let i = 0; i < 5; i++) {
 
         const winner = playRound(getUsersChoice(), getComputersChoice());
@@ -68,9 +66,6 @@ function playGame() {
         }
 
     }
-
-
-
 
     console.log(
         (userScore > computerScore ? `Congratulations! you have won!` :
