@@ -22,9 +22,12 @@ function playGame() {
 
 
     function getComputersChoice() {
-        if (Math.random() < 0.33) {
+
+        const random = Math.random()
+
+        if (random < 0.33) {
             return "rock";
-        } else if (Math.random() < 0.66) {
+        } else if (random < 0.66) {
             return "paper";
         } else {
             return "scissors"
