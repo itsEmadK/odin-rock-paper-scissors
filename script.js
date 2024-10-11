@@ -12,10 +12,14 @@ function playGame() {
     }
 
     console.log(
-        (userScore > computerScore ? `Congratulations! you have won!` :
-            `Sorry, you have lost...`) +
+        (userScore > computerScore ? "Congratulations! you have won!" :
+            (userScore < computerScore) ? "Sorry, you have lost..." :
+                "It's a tie!"
+        ));
+    console.log(
         `Your score: ${userScore} - Computer's score:${computerScore}`
     );
+
 
     function getComputersChoice() {
         if (Math.random() < 0.33) {
