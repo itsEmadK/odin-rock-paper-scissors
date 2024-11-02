@@ -10,3 +10,9 @@
     padding-bottom: 20px;
     text-align: center;
 }
+
+.header {
+    color: #fac650;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+}
