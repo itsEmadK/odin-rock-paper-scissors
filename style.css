@@ -8,6 +8,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #222831;
 }
 
 .header-container {
@@ -24,7 +25,6 @@ body {
 }
 
 .main-container {
-    background-color: #222831;
     flex: 1;
 }
 
