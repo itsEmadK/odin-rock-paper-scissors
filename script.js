@@ -53,7 +53,21 @@ choiceButtons.forEach((btn) => {
         playerScoreElement.textContent = `Player: ${userScore}`;
         computerScoreElement.textContent = `Computer: ${computerScore}`;
 
+        if (userScore === 5 || computerScore === 5) {
+            userScore = 0;
+            computerScore = 0;
+            let gameResult;
+            let gameResultMessage;
+            if (userScore === 5) {
+                gameResult = "You won the game!"
+            } else {
+                gameResult = "You lost the game :("
+            }
+            gameResultMessage = "Game over, choose one item to play again :)";
 
+            roundResultElement.textContent = gameResult;
+            roundResultMessageElement.textContent = gameResultMessage;
+        }
 
     })
 })
