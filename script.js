@@ -72,14 +72,14 @@ choiceButtons.forEach((btn) => {
     });
 
     btn.addEventListener("mouseleave", () => {
-        changeBGColor(btn,"#393e46");
+        changeBGColor(btn, "#393e46");
     });
 
-    btn.addEventListener("mousedown",()=>{
+    btn.addEventListener("mousedown", () => {
         changeBGColor(btn, "#7b8190");
     });
 
-    btn.addEventListener("mouseup",()=>{
+    btn.addEventListener("mouseup", () => {
         changeBGColor(btn, "#484d53");
     });
 })
@@ -123,7 +123,7 @@ function getEquivalentEmoji(choice) {
 }
 
 function getRoundMessage(usersChoice, computersChoice) {
-    if (usersChoice ?? "".toLowerCase() === computersChoice.toLowerCase()) {
+    if (usersChoice.toLowerCase() === computersChoice.toLowerCase()) {
         return `You both used ${usersChoice}!`
     } else if (
         String(usersChoice).toLowerCase() === "rock" && computersChoice === "scissors" ||
