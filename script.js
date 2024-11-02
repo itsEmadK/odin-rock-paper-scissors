@@ -64,9 +64,9 @@ choiceButtons.forEach((btn) => {
             gameResultMessage = "Game over, choose one item to play again :)";
             roundResultElement.textContent = gameResult;
             roundResultMessageElement.textContent = gameResultMessage;
+            userScore = 0;
+            computerScore = 0;
         }
-        userScore = 0;
-        computerScore = 0;
 
     })
 })
