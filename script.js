@@ -50,6 +50,11 @@ choiceButtons.forEach((btn) => {
 
         roundResultMessageElement.textContent = roundMessage;
 
+        playerScoreElement.textContent = `Player: ${userScore}`;
+        computerScoreElement.textContent = `Computer: ${computerScore}`;
+
+
+
     })
 })
 
