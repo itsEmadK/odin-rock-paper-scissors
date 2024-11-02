@@ -84,6 +84,7 @@ choiceButtons.forEach((btn) => {
     });
 })
 
+//returns the random choice of computer.
 function getComputersChoice() {
 
     const random = Math.random()
@@ -116,12 +117,14 @@ function calculateRoundWinner(usersChoice, computersChoice) {
     }
 }
 
+//returns the corresponding symbol based on the choice.
 function getEquivalentEmoji(choice) {
     if (choice === "rock") return "✊";
     else if (choice === "paper") return "✋";
     else return "✌";
 }
 
+//returns the message of the round result based on the choices.
 function getRoundMessage(usersChoice, computersChoice) {
     if (calculateRoundWinner(usersChoice, computersChoice) === "user") {
         return (`Your ${usersChoice} ${usersChoice === "rock" ? "broke" :
@@ -137,10 +140,12 @@ function getRoundMessage(usersChoice, computersChoice) {
     }
 }
 
+//changes the background color of the given element.
 function changeBGColor(element, color) {
     element.style.backgroundColor = color;
 }
 
+//returns the winner of the game based on the scores.
 function calculateGameWinner(userScore, computerScore) {
     if (userScore === 5) return "user";
     else if (computerScore === 5) return "computer";
