@@ -69,3 +69,9 @@ body {
     font-size:80px;
     margin-bottom: 10px;
 }
+
+.player-score,
+.computer-score {
+    font-size: 20px;
+    font-weight: 600;
+}
