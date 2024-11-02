@@ -39,3 +39,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
+.round-result {
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
