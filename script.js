@@ -53,17 +53,12 @@ choiceButtons.forEach((btn) => {
         playerScoreElement.textContent = `Player: ${userScore}`;
         computerScoreElement.textContent = `Computer: ${computerScore}`;
 
-        if (userScore === 5 || computerScore === 5) {
-            let gameResult;
-            let gameResultMessage;
-            if (userScore === 5) {
-                gameResult = "You won the game!"
-            } else {
-                gameResult = "You lost the game :("
-            }
-            gameResultMessage = "Game over, choose one item to play again :)";
-            roundResultElement.textContent = gameResult;
-            roundResultMessageElement.textContent = gameResultMessage;
+        const gameWinner = calculateGameWinner(userScore, computerScore);
+        if (gameWinner !== null) { //The game has a winner
+            if (gameWinner === "user") roundResultElement.textContent = "You won!";
+            else if (gameWinner === "computer") roundResultElement.textContent = "You lost :(";
+
+            roundResultMessageElement.textContent = "Game over; choose rock, paper or scissors to start again!";
             userScore = 0;
             computerScore = 0;
         }
@@ -154,4 +149,10 @@ function getRoundMessage(usersChoice, computersChoice) {
 
 function changeBGColor(element, color) {
     element.style.backgroundColor = color;
+}
+
+function calculateGameWinner(userScore, computerScore) {
+    if (userScore === 5) return "user";
+    else if (computerScore === 5) return "computer";
+    else return null;
 }
