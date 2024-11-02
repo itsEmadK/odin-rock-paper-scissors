@@ -49,3 +49,10 @@ body {
     font-size: 24px;
     font-weight: 500;
 }
+
+.result-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 60px;
+}
