@@ -12,6 +12,13 @@ const computerScore = document.querySelector(".computer-score");
 const choiceButtons = document.querySelectorAll(".btn.choice");
 
 
+choiceButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+
+
+    })
+})
+
 
 function getComputersChoice() {
 
