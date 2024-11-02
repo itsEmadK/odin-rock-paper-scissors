@@ -39,6 +39,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
+
 .round-result {
     font-weight: 600;
     font-size: 28px;
@@ -56,3 +57,10 @@ body {
     text-align: center;
     gap: 60px;
 }
+
+.player-score-container,
+.computer-score-container {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
