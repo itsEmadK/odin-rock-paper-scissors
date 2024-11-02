@@ -25,6 +25,9 @@ choiceButtons.forEach((btn) => {
             usersChoice = "scissors";
         }
 
+        playersLastMove.textContent = getEquivalentEmoji(usersChoice);
+        computersLastMove.textContent = getEquivalentEmoji(computersChoice);
+
         const roundWinner = playRound(usersChoice,computersChoice);
 
     })
