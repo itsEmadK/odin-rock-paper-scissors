@@ -123,23 +123,13 @@ function getEquivalentEmoji(choice) {
 }
 
 function getRoundMessage(usersChoice, computersChoice) {
-    if (usersChoice.toLowerCase() === computersChoice.toLowerCase()) {
-        return `You both used ${usersChoice}!`
-    } else if (
-        String(usersChoice).toLowerCase() === "rock" && computersChoice === "scissors" ||
-        String(usersChoice).toLowerCase() === "paper" && computersChoice === "rock" ||
-        String(usersChoice).toLowerCase() === "scissors" && computersChoice === "paper"
-    ) {
+    if (playRound(usersChoice, computersChoice) === "user") {
         return (`Your ${usersChoice} ${usersChoice === "rock" ? "broke" :
             usersChoice === "paper" ? "covered" : "cut"
         } computer's ${computersChoice}!
             `);
 
-    } else if (
-        String(usersChoice).toLowerCase() === "rock" ||
-        String(usersChoice).toLowerCase() === "paper" ||
-        String(usersChoice).toLowerCase() === "scissors"
-    ) {
+    } else if (playRound(usersChoice, computersChoice) === "computer") {
         return (`Your ${usersChoice} ${usersChoice === "rock" ? "was covered" :
                 usersChoice === "paper" ? "was cut" : "were broken"
             } by computer's ${computersChoice}`
