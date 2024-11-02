@@ -8,10 +8,8 @@ const computersLastMove = document.querySelector(".computer-last-move");
 const playerScore = document.querySelector(".player-score");
 const computerScore = document.querySelector(".computer-score");
 
-//Choice section elements:
-const choiceRockBTN = document.querySelector(".btn.choice.rock");
-const rockRockBTN = document.querySelector(".btn.choice.paper");
-const scissorsRockBTN = document.querySelector(".btn.choice.scissors");
+//Buttons:
+const choiceButtons = document.querySelectorAll(".btn.choice");
 
 
 
