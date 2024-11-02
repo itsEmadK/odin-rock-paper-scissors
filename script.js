@@ -1,12 +1,12 @@
 //Result section elements:
-const roundResult = document.querySelector(".round-result");
-const roundResultMessage = document.querySelector(".round-result-message");
+const roundResultElement = document.querySelector(".round-result");
+const roundResultMessageElement = document.querySelector(".round-result-message");
 
 //Score section elements:
-const playersLastMove = document.querySelector(".player-last-move");
-const computersLastMove = document.querySelector(".computer-last-move");
-const playerScore = document.querySelector(".player-score");
-const computerScore = document.querySelector(".computer-score");
+const playersLastMoveElement = document.querySelector(".player-last-move");
+const computersLastMoveElement = document.querySelector(".computer-last-move");
+const playerScoreElement = document.querySelector(".player-score");
+const computerScoreElement = document.querySelector(".computer-score");
 
 //Buttons:
 const choiceButtons = document.querySelectorAll(".btn.choice");
@@ -25,25 +25,25 @@ choiceButtons.forEach((btn) => {
             usersChoice = "scissors";
         }
 
-        playersLastMove.textContent = getEquivalentEmoji(usersChoice);
-        computersLastMove.textContent = getEquivalentEmoji(computersChoice);
+        playersLastMoveElement.textContent = getEquivalentEmoji(usersChoice);
+        computersLastMoveElement.textContent = getEquivalentEmoji(computersChoice);
 
         const roundWinner = playRound(usersChoice, computersChoice);
         const roundMessage = getRoundMessage(usersChoice, computersChoice);
 
-        switch (roundWinner){
+        switch (roundWinner) {
             case "user":
-                roundResult.textContent = "You won!";
+                roundResultElement.textContent = "You won!";
                 break;
             case "computer":
-                roundResult.textContent = "You lost :(";
+                roundResultElement.textContent = "You lost :(";
                 break;
             default:
-                roundResult.textContent = "It's a tie :)";
+                roundResultElement.textContent = "It's a tie :)";
 
         }
 
-        roundResultMessage.textContent = roundMessage;
+        roundResultMessageElement.textContent = roundMessage;
 
     })
 })
