@@ -90,4 +90,5 @@ body {
     border-radius: 10px;
     border: none;
     padding: 36px;
+    cursor: pointer;
 }
