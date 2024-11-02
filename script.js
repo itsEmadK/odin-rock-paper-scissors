@@ -28,7 +28,7 @@ choiceButtons.forEach((btn) => {
         playersLastMove.textContent = getEquivalentEmoji(usersChoice);
         computersLastMove.textContent = getEquivalentEmoji(computersChoice);
 
-        const roundWinner = playRound(usersChoice,computersChoice);
+        const roundWinner = playRound(usersChoice, computersChoice);
 
     })
 })
@@ -49,7 +49,7 @@ function getComputersChoice() {
 
 //returns the winner of the round.
 function playRound(usersChoice, computersChoice) {
-    if (usersChoice??"".toLowerCase() === computersChoice.toLowerCase()) {
+    if (usersChoice ?? "".toLowerCase() === computersChoice.toLowerCase()) {
         console.log(
             `You both used ${usersChoice} so this is a tie!`
         );
@@ -87,8 +87,33 @@ function playRound(usersChoice, computersChoice) {
     }
 }
 
-function getEquivalentEmoji(choice){
+function getEquivalentEmoji(choice) {
     if (choice === "rock") return "✊";
     else if (choice === "paper") return "✋";
     else return "✌";
+}
+
+function getRoundMessage(usersChoice, computersChoice) {
+    if (usersChoice ?? "".toLowerCase() === computersChoice.toLowerCase()) {
+        return `You both used ${usersChoice}!`
+    } else if (
+        String(usersChoice).toLowerCase() === "rock" && computersChoice === "scissors" ||
+        String(usersChoice).toLowerCase() === "paper" && computersChoice === "rock" ||
+        String(usersChoice).toLowerCase() === "scissors" && computersChoice === "paper"
+    ) {
+        return (`Your ${usersChoice} ${usersChoice === "rock" ? "broke" :
+            usersChoice === "paper" ? "covered" : "cut"
+        } computer's ${computersChoice}!
+            `);
+
+    } else if (
+        String(usersChoice).toLowerCase() === "rock" ||
+        String(usersChoice).toLowerCase() === "paper" ||
+        String(usersChoice).toLowerCase() === "scissors"
+    ) {
+        return (`Your ${usersChoice} ${usersChoice === "rock" ? "was covered" :
+                usersChoice === "paper" ? "was cut" : "were broken"
+            } by computer's ${computersChoice}`
+        );
+    }
 }
