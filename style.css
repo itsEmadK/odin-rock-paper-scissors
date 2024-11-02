@@ -44,3 +44,8 @@ body {
     font-size: 28px;
     margin-bottom: 10px;
 }
+
+.round-result-message {
+    font-size: 24px;
+    font-weight: 500;
+}
