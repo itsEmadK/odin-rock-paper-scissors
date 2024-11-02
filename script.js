@@ -31,7 +31,7 @@ choiceButtons.forEach((btn) => {
         playersLastMoveElement.textContent = getEquivalentEmoji(usersChoice);
         computersLastMoveElement.textContent = getEquivalentEmoji(computersChoice);
 
-        const roundWinner = playRound(usersChoice, computersChoice);
+        const roundWinner = calculateRoundWinner(usersChoice, computersChoice);
         const roundMessage = getRoundMessage(usersChoice, computersChoice);
 
         switch (roundWinner) {
@@ -98,7 +98,7 @@ function getComputersChoice() {
 }
 
 //returns the winner of the round.
-function playRound(usersChoice, computersChoice) {
+function calculateRoundWinner(usersChoice, computersChoice) {
     if (usersChoice.toLowerCase() === computersChoice.toLowerCase()) {
         return null;
     } else if (
@@ -123,13 +123,13 @@ function getEquivalentEmoji(choice) {
 }
 
 function getRoundMessage(usersChoice, computersChoice) {
-    if (playRound(usersChoice, computersChoice) === "user") {
+    if (calculateRoundWinner(usersChoice, computersChoice) === "user") {
         return (`Your ${usersChoice} ${usersChoice === "rock" ? "broke" :
             usersChoice === "paper" ? "covered" : "cut"
         } computer's ${computersChoice}!
             `);
 
-    } else if (playRound(usersChoice, computersChoice) === "computer") {
+    } else if (calculateRoundWinner(usersChoice, computersChoice) === "computer") {
         return (`Your ${usersChoice} ${usersChoice === "rock" ? "was covered" :
                 usersChoice === "paper" ? "was cut" : "were broken"
             } by computer's ${computersChoice}`
