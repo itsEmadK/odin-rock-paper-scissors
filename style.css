@@ -80,7 +80,7 @@ body {
 .choice-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 
