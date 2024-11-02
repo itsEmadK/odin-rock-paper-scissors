@@ -81,6 +81,13 @@ choiceButtons.forEach((btn) => {
         changeBGColor(btn,"#393e46");
     });
 
+    btn.addEventListener("mousedown",()=>{
+        changeBGColor(btn, "#7b8190");
+    });
+
+    btn.addEventListener("mouseup",()=>{
+        changeBGColor(btn, "#484d53");
+    });
 })
 
 function getComputersChoice() {
