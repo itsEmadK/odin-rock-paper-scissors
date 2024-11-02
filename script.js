@@ -14,7 +14,18 @@ const choiceButtons = document.querySelectorAll(".btn.choice");
 
 choiceButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
+        const elementClassList = [...e.target.classList];
+        const computersChoice = getComputersChoice();
+        let usersChoice;
+        if (elementClassList.includes("rock")) {
+            usersChoice = "rock";
+        } else if (elementClassList.includes("paper")) {
+            usersChoice = "paper";
+        } else {
+            usersChoice = "scissors";
+        }
 
+        const roundWinner = playRound(usersChoice,computersChoice);
 
     })
 })
