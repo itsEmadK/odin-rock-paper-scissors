@@ -64,3 +64,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.player-last-move,
+.computer-last-move {
+    font-size:80px;
+}
