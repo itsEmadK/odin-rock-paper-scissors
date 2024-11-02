@@ -1,3 +1,6 @@
+let userScore = 0;
+let computerScore = 0;
+
 //Result section elements:
 const roundResultElement = document.querySelector(".round-result");
 const roundResultMessageElement = document.querySelector(".round-result-message");
@@ -34,9 +37,11 @@ choiceButtons.forEach((btn) => {
         switch (roundWinner) {
             case "user":
                 roundResultElement.textContent = "You won!";
+                userScore++;
                 break;
             case "computer":
                 roundResultElement.textContent = "You lost :(";
+                computerScore++;
                 break;
             default:
                 roundResultElement.textContent = "It's a tie :)";
