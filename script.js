@@ -72,6 +72,15 @@ choiceButtons.forEach((btn) => {
     })
 })
 
+choiceButtons.forEach((btn) => {
+    btn.addEventListener("mouseenter", () => {
+        changeBGColor(btn, "#484d53");
+    })
+
+    btn.addEventListener("mouseleave", () => {
+        changeBGColor(btn,"#393e46");
+    })
+})
 
 function getComputersChoice() {
 
@@ -134,4 +143,8 @@ function getRoundMessage(usersChoice, computersChoice) {
             } by computer's ${computersChoice}`
         );
     }
+}
+
+function changeBGColor(element, color) {
+    element.style.backgroundColor = color;
 }
