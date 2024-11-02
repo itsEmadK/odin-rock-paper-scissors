@@ -11,14 +11,6 @@ function getComputersChoice() {
     }
 }
 
-function getUsersChoice() {
-
-    const usersChoice = prompt("Please enter your choice between Rock, Paper and Scissors:");
-    return usersChoice;
-
-
-}
-
 //returns the winner of the round.
 function playRound(usersChoice, computersChoice) {
     if (usersChoice??"".toLowerCase() === computersChoice.toLowerCase()) {
