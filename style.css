@@ -67,4 +67,5 @@ body {
 .player-last-move,
 .computer-last-move {
     font-size:80px;
+    margin-bottom: 10px;
 }
