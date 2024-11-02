@@ -83,3 +83,9 @@ function playRound(usersChoice, computersChoice) {
         return "computer";
     }
 }
+
+function getEquivalentEmoji(choice){
+    if (choice === "rock") return "✊";
+    else if (choice === "paper") return "✋";
+    else return "✌";
+}
