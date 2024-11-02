@@ -29,6 +29,21 @@ choiceButtons.forEach((btn) => {
         computersLastMove.textContent = getEquivalentEmoji(computersChoice);
 
         const roundWinner = playRound(usersChoice, computersChoice);
+        const roundMessage = getRoundMessage(usersChoice, computersChoice);
+
+        switch (roundWinner){
+            case "user":
+                roundResult.textContent = "You won!";
+                break;
+            case "computer":
+                roundResult.textContent = "You lost :(";
+                break;
+            default:
+                roundResult.textContent = "It's a tie :)";
+
+        }
+
+        roundResultMessage.textContent = roundMessage;
 
     })
 })
