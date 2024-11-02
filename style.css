@@ -81,6 +81,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
+    margin-bottom: 80px;
 }
 
 
