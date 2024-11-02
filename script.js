@@ -137,6 +137,8 @@ function getRoundMessage(usersChoice, computersChoice) {
                 usersChoice === "paper" ? "was cut" : "were broken"
             } by computer's ${computersChoice}`
         );
+    } else {
+        return `You both used ${usersChoice}`;
     }
 }
 
